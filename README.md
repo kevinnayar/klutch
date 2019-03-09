@@ -27,10 +27,10 @@ const Layout = () => {
   return (
     <Row>
       <Column columnWidth="1/2">
-        <Cell style={{ backgroundColor: '#ababab' }} />
+        <Cell style={{ backgroundColor: '#FF9AA2' }} />
       </Column>
       <Column columnWidth="1/2">
-        <Cell style={{ backgroundColor: '#dcdcdc' }} />
+        <Cell style={{ backgroundColor: '#FFB7B2' }} />
       </Column>
     </Row>
   );
@@ -48,16 +48,16 @@ export default Layout;
 ```html
 <Row>
   <Column columnWidth="1/8">
-    <Cell style={{ backgroundColor: '#ababab' }} />
+    <Cell style={{ backgroundColor: '#FFDAC1' }} />
   </Column>
   <Column columnWidth="1/8">
-    <Cell style={{ backgroundColor: '#dcdcdc' }} />
+    <Cell style={{ backgroundColor: '#E2F0CB' }} />
   </Column>
   <Column columnWidth="1/4">
-    <Cell style={{ backgroundColor: '#ababab' }} />
+    <Cell style={{ backgroundColor: '#B5EAD7' }} />
   </Column>
   <Column columnWidth="1/2">
-    <Cell style={{ backgroundColor: '#dcdcdc' }} />
+    <Cell style={{ backgroundColor: '#C7CEEA' }} />
   </Column>
 </Row>
 ```
@@ -71,10 +71,10 @@ export default Layout;
 ```html
 <Row>
   <Column columnWidth="1/3">
-    <Cell style={{ backgroundColor: '#ababab' }} />
+    <Cell style={{ backgroundColor: '#FF9AA2' }} />
   </Column>
   <Column columnWidth="2/3">
-    <Cell style={{ backgroundColor: '#dcdcdc' }} />
+    <Cell style={{ backgroundColor: '#FFB7B2' }} />
   </Column>
 </Row>
 ```
@@ -88,13 +88,13 @@ export default Layout;
 ```html
 <Row>
   <Column columnWidth="1/5">
-    <Cell style={{ backgroundColor: '#ababab' }} />
+    <Cell style={{ backgroundColor: '#FFDAC1' }} />
   </Column>
   <Column columnWidth="2/5">
-    <Cell style={{ backgroundColor: '#dcdcdc' }} />
+    <Cell style={{ backgroundColor: '#E2F0CB' }} />
   </Column>
   <Column columnWidth="2/5">
-    <Cell style={{ backgroundColor: '#ababab' }} />
+    <Cell style={{ backgroundColor: '#B5EAD7' }} />
   </Column>
 </Row>
 ```
@@ -106,8 +106,8 @@ export default Layout;
 
 **Putting it all together**
 ```html
-<div>
-  
+<div style={{ border: '2px solid #999999' }}>
+
   <Row gutter="20px" removeBottomGutter>
     <Column columnWidth="1">
       <Cell style={{ backgroundColor: '#FF9AA2' }} />
