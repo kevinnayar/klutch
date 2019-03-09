@@ -13,7 +13,7 @@ Klutch is a lightweight, responsive layout system for React. It's simple by desi
 
 ### Installation
 ```
-npm install react klutch -s
+npm install klutch -s
 ```
 
 <br>
@@ -42,7 +42,9 @@ export default Layout;
 **Renders**
 ![Two equal columns](https://github.com/kevinnayar/klutch/blob/master/images/columns-1_2-1_2.png)
 
-**A few more examples**
+<br>
+
+**Columns of different widths**
 ```html
 <Row>
   <Column columnWidth="1/8">
@@ -60,11 +62,12 @@ export default Layout;
 </Row>
 ```
 
-**Renders**
+**Renders:**
 ![A row with 4 columns: 1/8, 1/8, 1/4, and 1/2](https://github.com/kevinnayar/klutch/blob/master/images/columns-1_8-1_8-1_4-1_2.png)
 
 <br>
 
+**Columns divisible by 3**
 ```html
 <Row>
   <Column columnWidth="1/3">
@@ -76,8 +79,88 @@ export default Layout;
 </Row>
 ```
 
-**Renders**
+**Renders:**
 ![A row with 2 columns: 1/3 and 2/3](https://github.com/kevinnayar/klutch/blob/master/images/columns-1_3-2_3.png)
+
+<br>
+
+**Columns divisible by 5**
+```html
+<Row>
+  <Column columnWidth="1/5">
+    <Cell style={{ backgroundColor: '#ababab' }} />
+  </Column>
+  <Column columnWidth="2/5">
+    <Cell style={{ backgroundColor: '#dcdcdc' }} />
+  </Column>
+  <Column columnWidth="2/5">
+    <Cell style={{ backgroundColor: '#ababab' }} />
+  </Column>
+</Row>
+```
+
+**Renders:**
+![A row with 3 columns: 1/5, 2/5, and 2/5](https://github.com/kevinnayar/klutch/blob/master/images/columns-1_5-2_5-2_5.png)
+
+<br>
+
+**Putting it all together**
+```html
+<>
+  <Row gutter="20px" removeBottomGutter>
+    <Column columnWidth="1">
+      <Cell style={{ backgroundColor: '#FF9AA2' }} />
+    </Column>
+  </Row>
+  <Row gutter="20px" removeBottomGutter>
+    <Column columnWidth="1/2">
+      <Cell style={{ backgroundColor: '#FFB7B2' }} />
+    </Column>
+    <Column columnWidth="1/2">
+      <Cell style={{ backgroundColor: '#FFDAC1' }} />
+    </Column>
+  </Row>
+  <Row gutter="20px" removeBottomGutter>
+    <Column columnWidth="1/8">
+      <Cell style={{ backgroundColor: '#E2F0CB' }} />
+    </Column>
+    <Column columnWidth="1/8">
+      <Cell style={{ backgroundColor: '#B5EAD7' }} />
+    </Column>
+    <Column columnWidth="1/4">
+      <Cell style={{ backgroundColor: '#C7CEEA' }} />
+    </Column>
+    <Column columnWidth="1/2">
+      <Cell style={{ backgroundColor: '#FF9AA2' }} />
+    </Column>
+  </Row>
+  <Row gutter="20px" removeBottomGutter>
+    <Column columnWidth="1/3">
+      <Cell style={{ backgroundColor: '#FFB7B2' }} />
+    </Column>
+    <Column columnWidth="2/3">
+      <Cell style={{ backgroundColor: '#FFDAC1' }} />
+    </Column>
+  </Row>
+  <Row gutter="20px">
+    <Column columnWidth="1/5">
+      <Cell style={{ backgroundColor: '#E2F0CB' }} />
+    </Column>
+    <Column columnWidth="3/5">
+      <Cell style={{ backgroundColor: '#B5EAD7' }} />
+    </Column>
+    <Column columnWidth="1/5">
+      <Cell style={{ backgroundColor: '#C7CEEA' }} />
+    </Column>
+  </Row>
+</>
+```
+
+**Renders:**
+![Rows with various columns and gutters](https://github.com/kevinnayar/klutch/blob/master/images/columns-various.png)
+
+<br>
+
 
 ### Components
 ```
@@ -109,7 +192,7 @@ The sum of all column widths within a single row must be equal to one.
 | --------- | --- | ----------- | ----------- |
 |`columnWidth`|`string`|`1/2`, `1/4`, `1/8`, `1/3`, `2/3`, `1/5`, `2/5`, `3/5`, `4/5`| Sets the width of the column.|
 |`containsChildComponents`|`boolean`|`true`, `false`|Allows for nested child columns.|
-|`children`|`node`|`<Cell/>`|Required.|
+|`children`|`node`|`<Cell/>` or any React component/HTML element.|Required.|
 
 <br>
 
@@ -123,9 +206,9 @@ Cell is an **optional** component that can be nested within a column. It's only 
 
 |Property|Type|Example Values|Description|
 | --------- | --- | ----------- | ----------- |
-|`classNames`|`string`|`"klutch-cell"`, or `"foo bar"`|A string of class names so that the cell can be styled via CSS.|
+|`classNames`|`string`|`"klutch-cell"`, `"foo bar"`|A string of class names so that the cell can be styled via CSS.|
 |`style`|`object`|`{lineHeight: '1'}`| Inline CSS block to style the cell.|
-|`children`|`node`|Any React component or HTML element.|Optional.|
+|`children`|`node`|Any React component/HTML element.|Optional.|
 
 ### License
 This package is released under the [MIT License](https://en.wikipedia.org/wiki/MIT_License).

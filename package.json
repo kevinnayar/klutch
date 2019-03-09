@@ -1,6 +1,6 @@
 {
   "name": "klutch",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Klutch is a lightweight, responsive layout system for React.",
   "main": "build/index.js",
   "scripts": {
@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "react": "^15.6.2",
-    "react-dom": "^16.8.4",
     "webpack": "^2.7.0"
   },
   "devDependencies": {
