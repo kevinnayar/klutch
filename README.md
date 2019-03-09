@@ -106,12 +106,14 @@ export default Layout;
 
 **Putting it all together**
 ```html
-<>
+<div>
+  
   <Row gutter="20px" removeBottomGutter>
     <Column columnWidth="1">
       <Cell style={{ backgroundColor: '#FF9AA2' }} />
     </Column>
   </Row>
+
   <Row gutter="20px" removeBottomGutter>
     <Column columnWidth="1/2">
       <Cell style={{ backgroundColor: '#FFB7B2' }} />
@@ -120,6 +122,7 @@ export default Layout;
       <Cell style={{ backgroundColor: '#FFDAC1' }} />
     </Column>
   </Row>
+
   <Row gutter="20px" removeBottomGutter>
     <Column columnWidth="1/8">
       <Cell style={{ backgroundColor: '#E2F0CB' }} />
@@ -134,6 +137,7 @@ export default Layout;
       <Cell style={{ backgroundColor: '#FF9AA2' }} />
     </Column>
   </Row>
+
   <Row gutter="20px" removeBottomGutter>
     <Column columnWidth="1/3">
       <Cell style={{ backgroundColor: '#FFB7B2' }} />
@@ -142,6 +146,7 @@ export default Layout;
       <Cell style={{ backgroundColor: '#FFDAC1' }} />
     </Column>
   </Row>
+
   <Row gutter="20px">
     <Column columnWidth="1/5">
       <Cell style={{ backgroundColor: '#E2F0CB' }} />
@@ -153,7 +158,8 @@ export default Layout;
       <Cell style={{ backgroundColor: '#C7CEEA' }} />
     </Column>
   </Row>
-</>
+
+</div>
 ```
 
 **Renders:**
