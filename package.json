@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "react": "^15.6.2",
-    "webpack": "^2.7.0"
+    "webpack": "^5.75.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
